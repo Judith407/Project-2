@@ -1,0 +1,47 @@
+integer distance
+integer boost1
+integer boost2
+integer distance1
+integer distance2
+integer count
+
+//Get distance to star
+distance = Get next input
+
+//Allow distance to be set for spaceships
+distance1 = 0
+distance2 = 0
+count = 0
+
+Put "Begin Race!" to output
+//Spaceships will continue while distance>distances1 and distance>distance2
+while distance > distance1 and distance > distance2
+   boost1 = RandomNumber (0,10)
+   boost2 = RandomNumber (0,10)
+//Distance spaceship1 is going
+   distance1 = distance1 + boost1
+//Distance spaceship2 is going
+   distance2 = distance2 + boost2
+
+// add by 1 to count
+   count = count + 1
+// include the moves spaceships are making
+   Put "\n Spaceship 1 has travelled a distance in round " to output
+   Put count to output
+   Put ":" to output
+   Put distance1 to output
+   Put " " to output
+   Put "\n Spaceship 2 has travelle a distance in round " to output
+   Put count to output
+   Put ":" to output
+   Put distance2 to output
+   Put " " to output
+
+//if spaceship1 makes it to star it is the winner but if spaceship2 wins it is the winner
+if distance1 > distance2 and distance2<distance
+   Put "\n Spaceship 1 is the winner" to output
+elseif distance2 > distance2 and distance1 < distance
+   Put "\n Spaceship 2 is the winner" to output
+// if there is a tie amongst both add it to output
+else 
+   Put "\n Tie!" to output
